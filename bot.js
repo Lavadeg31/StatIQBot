@@ -1,4 +1,4 @@
-const { Client, GatewayIntentBits, EmbedBuilder, PermissionFlagsBits } = require('discord.js');
+const { Client, GatewayIntentBits, EmbedBuilder, PermissionFlagsBits, ActivityType } = require('discord.js');
 const { exec } = require('child_process');
 const { promisify } = require('util');
 const path = require('path');
@@ -156,7 +156,7 @@ client.on('messageCreate', async (message) => {
 });
 
 // Bot ready event
-client.once('ready', () => {
+client.once('clientReady', () => {
   console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
   console.log(`✅ StatIQBot is online!`);
   console.log(`📝 Logged in as: ${client.user.tag}`);
@@ -169,7 +169,7 @@ client.once('ready', () => {
   console.log('  !refresh <event_id> - Refresh an event');
   console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
   
-  client.user.setActivity('!refresh <event_id>', { type: 'WATCHING' });
+  client.user.setActivity('!refresh <event_id>', { type: ActivityType.Watching });
 });
 
 // Error handling
