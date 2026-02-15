@@ -1,0 +1,17 @@
+{
+  "name": "statiqbot",
+  "version": "1.0.0",
+  "description": "Discord bot for refreshing scouting app events on Raspberry Pi 4",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js",
+    "dev": "node bot.js"
+  },
+  "keywords": ["discord", "bot", "robotics", "scouting"],
+  "author": "RoboStem Foundation",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.4.1"
+  }
+}
